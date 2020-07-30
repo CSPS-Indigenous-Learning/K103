@@ -1,0 +1,461 @@
+#title-area{
+	background-color: rgba(255, 255, 255, 0.6);
+	padding: 30px 15% 50px 15%;
+	width: 70%;
+	position: absolute;
+	top: 25%;
+	left: 0px;
+	color: black;
+	text-align: left;
+	z-index:2;
+	
+	#title-welcome{
+		font-weight: normal;
+		display: block;
+		font-size: 25px;
+		font-family: Roboto;
+	}
+	#series-title{
+		font-weight: bold;
+		display: block;
+		font-size: 40px;
+		font-family: Roboto;
+	}
+	#coursename{
+		font-weight: bold;
+		font-size: 60px;
+	}
+}
+
+#launch-placement{
+	position: absolute;
+	top: calc(25% + 200px);
+	left: 15%;
+	z-index: 3;
+	
+	a{
+		background-color: $main_color;
+		padding: 7px 50px;
+		text-decoration: none;
+		color: white;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 20px;
+		position: relative;
+		left: 625px;
+		top: 33px;
+		
+		@at-root html[lang="fr"] & {
+			left: 500px;
+		}
+		
+		&:visited{
+			color: white;
+		}
+	}
+}
+
+#wordmark{
+	margin-top: 42px;
+	padding-left: 20px;
+}
+
+/*[lang=en] .launchpage footer:after {
+	content: "A Step Towards Reconciliation: Canada Through a New Lens";
+}*/
+[lang=en] .launchpage footer:before {
+	content: "";
+	background: url('base/ILS_CercleLogoOnly.png') center center no-repeat;
+	background-size: cover;
+}
+/*[lang=fr] .launchpage footer:after {
+	content: "Un pas vers la r\00e9 conciliation : Le Canada sous un autre angle";
+}*/
+[lang=fr] .launchpage footer:before {
+	content: "";
+	background: url('base/ILS_CercleLogoOnlyFR.png') center center no-repeat;
+	background-size: cover;
+}
+
+.launchpage footer#canada-logo{
+	position: fixed;
+	width: calc(100% - 1em);
+    bottom: 0px;
+    height: 200px;
+	
+	img{
+		position: absolute;
+    	top: 43%;
+    	right: 25px;
+	}
+	&:before{
+		content: "";
+		position: absolute;
+		top: 0px;
+	}
+	/*&:after{
+		position: absolute;
+    	top: 40%;
+	}*/
+	.reconciliation{
+		position: absolute;
+    	top: 36%;
+	}
+}
+
+@media (max-height: 700px){
+	.launchpage footer#canada-logo{
+		height: 150px;
+		
+		&:before{
+			height: 150px;
+			width: 150px;
+		}
+		.reconciliation{
+			top: 32%;
+		}
+	}
+}
+
+@media (max-height: 400px){
+	.launchpage footer#canada-logo{
+		height: 50px;
+		
+		&:before{
+			width: 75px;
+			height: 75px;
+		}
+	}
+}
+
+#noclose{
+	top: -10px;
+}
+
+
+/*------------------ Responsive -----------------*/
+@media screen and (max-width: 1550px){
+	#launch-placement a{
+		left: 425px;
+		
+		@at-root html[lang="fr"] & {
+			left: 300px;
+		}
+	}
+}
+
+@media screen and (max-width: 1350px){
+	#title-area{
+		top: 30%;
+
+		#title-welcome{
+			font-size: 25px;
+		}
+		#series-title{
+			font-size: 30px;
+		}
+		#coursename{
+			font-size: 50px;
+		}
+	}
+	
+	#launch-placement{
+		top: calc(30% + 177px);
+		
+		a{
+			left: 225px;
+			
+			@at-root html[lang="fr"] & {
+				left: 100px;
+			}
+		}
+	}
+}
+
+@include breakpoint-lt("large"){
+	#title-area{
+		top: 20%;
+
+		#title-welcome{
+			font-size: 20px;
+		}
+		#series-title{
+			font-size: 25px;
+		}
+		#coursename{
+			font-size: 40px;
+		}
+	}
+	
+	#launch-placement{
+		top: calc(20% + 150px);
+		
+		a{
+			left: 125px;
+			font-size: 16px;
+			
+			@at-root html[lang="fr"] & {
+				left: 25px;
+			}
+		}
+	}
+	
+	#wordmark{
+		margin-top: 25px;
+	}
+}
+
+@include breakpoint-lt("medium"){
+	#title-area{
+		top: 15%;
+	}
+	
+	#launch-placement{
+		top: calc(15% + 150px); 
+		font-size: 16px;
+		
+		a{
+			left: 75px;
+			
+			@at-root html[lang="fr"] & {
+				left: 25px;
+			}
+		}
+	}
+	
+	/*.launchpage footer#canada-logo:after {
+		font-size: 20px;
+    	left: 3%;
+	}*/
+	
+	.launchpage footer#canada-logo .reconciliation {
+		font-size: 20px;
+    	left: 3%;
+		width: 60%;
+	}
+	
+	#noclose{
+		top: -10px;
+	}
+	
+	#wordmark{
+		margin-top: 18px;
+	}
+}
+
+@media screen and (max-width: 915px){
+	#title-area{
+		top: 10%;
+		
+		#title-welcome{
+			font-size: 16px;
+		}
+		#series-title{
+			font-size: 20px;
+		}
+		#coursename{
+			font-size: 35px;
+		}
+	}
+	
+	#launch-placement{
+		top: calc(10% + 136px); 
+		
+		a{
+			left: 25px;
+			
+			@at-root html[lang="fr"] & {
+				left: 25px;
+			}
+		}
+	}
+	
+	/*.launchpage footer#canada-logo:after {
+		font-size: 18px;
+    	left: 4%;
+	}*/
+	.launchpage footer#canada-logo .reconciliation {
+		font-size: 18px;
+    	left: 4%;
+	}
+}
+
+@media screen and (max-width: 825px){
+	#title-area{
+		#title-welcome{
+			font-size: 16px;
+		}
+		#series-title{
+			font-size: 20px;
+		}
+		#coursename{
+			font-size: 30px;
+		}
+	}
+	
+	#launch-placement{
+		top: calc(10% + 130px); 
+		
+		@at-root html[lang="fr"] & {
+			font-size: 14px;
+		}
+	
+		a{
+			left: 10px;
+			
+			@at-root html[lang="fr"] & {
+				left: 10px;
+			}
+		}
+	}
+	
+	/*.launchpage footer#canada-logo:after {
+		font-size: 16px;
+    	left: 6%;
+	}*/
+	.launchpage footer#canada-logo .reconciliation {
+		font-size: 16px;
+    	left: 6%;
+		width: 57%;
+	}
+	
+	#wordmark{
+		margin-top: 13px;
+	}
+	
+	.launchpage footer#canada-logo img{
+		top: 40%;
+	}
+}
+
+@media (max-width: 670px){
+	.launchpage footer#canada-logo .reconciliation {
+		width: 45%;
+		margin-left: 30%;
+	}
+}
+
+@media (max-width: 650px){
+	#noclose{
+		font-size: 7px;
+	}
+	#title-area{
+		top: 7%;
+		padding: 15px 15% 25px 15%;
+
+		#title-welcome{
+			font-size: 12px;
+		}
+		#series-title{
+			font-size: 14px;
+		}
+		#coursename{
+			font-size: 16px;
+			display: block;
+		}
+	}
+	
+	#launch-placement{
+		top: 30%;
+		font-size: 10px;
+		
+		a{
+			left: 50px;
+			font-size: 8px;
+			padding: 4px 10px;
+			top: 15px;
+			
+			@at-root html[lang="fr"] & {
+				left: 0px;
+			}
+		}
+	}
+	.launchpage footer#canada-logo .reconciliation {
+		font-size: 10px;
+		margin-left: 15%;
+		width: 55%;
+	}
+}
+
+@media (max-width: 550px){	
+	#launch-placement{
+		top: 32%;
+	}
+}
+
+@media (max-width: 500px){	
+	#launch-placement{
+		top: 34%;
+	}
+}
+
+
+
+
+
+
+.launchpage {
+	/*& footer:after {
+		position: absolute;
+		width: 100%;
+		text-align: center;
+		top: 90%;
+		left: 0%;
+		font-size: x-large;
+	}*/
+	footer .reconciliation {
+		position: absolute;
+		width: 69%;
+		margin-left: 20%;
+		text-align: left;
+		top: 90%;
+		left: 0%;
+		font-size: x-large;
+		background-color: rgba(255, 255, 255, 0.6);
+		padding: 7px 0px 7px 1%;
+	}
+	footer:before {
+		position: absolute;
+		height: 200px;
+		width: 200px;
+		background-repeat-x: no-repeat;
+		background-repeat-y: no-repeat;
+		top: 80%;
+		left: 1em;
+		background-size: auto;
+		background-position-x: 0px;
+		background-position-y: 0px;
+		background-size: contain;
+		font-size: larger;
+	}
+	footer {
+		box-shadow: none;
+		text-align: right;
+		padding: 1em;
+	}
+	#noclose {
+		position: absolute;
+		right: 2em;
+		padding: 1em;
+	}
+}
+#splash-content {
+	font-size: 1.5em;
+	display: block;
+	text-align: center;
+	margin-top: 32%;
+	padding: 20px 20px 0 20px;
+	width: 100%;
+	height: 140px;
+	background: #fff;
+}
+body.launchpage {
+	overflow: hidden;
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+	background: url(base/K103_SPLASH_ILS.png) bottom center no-repeat;
+	background-position: top;
+	background-size: cover;
+	color: rgb(76, 80, 74);
+}
